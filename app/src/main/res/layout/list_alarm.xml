@@ -15,10 +15,23 @@
         />
 
     <ListView
+        android:id = "@+id/list"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/title"
         ></ListView>
+
+    <Button
+        android:id="@+id/buttonAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text = "Addition"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/list"
+        />
+
 
 
 </RelativeLayout>

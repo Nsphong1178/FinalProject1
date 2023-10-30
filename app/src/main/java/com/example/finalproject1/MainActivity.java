@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     private TimePicker timePicker;
     private Button setAlarmButton;
 
+    private Button MyAlarm;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +37,20 @@ public class MainActivity extends AppCompatActivity {
                 setAlarm();
             }
         });
+
+        MyAlarm = findViewById(R.id.MyAlarm);
+
+        MyAlarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ListIntent = new Intent(MainActivity.this, list_alarm.class);
+                startActivity(ListIntent);
+            }
+        });
+
     }
+
+
 
     private void setAlarm() {
         int hour, minute;

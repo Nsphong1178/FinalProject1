@@ -1,36 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
     tools:context=".MainActivity">
-
+    <ImageView
+        android:src="@drawable/back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
     <TextView
         android:id="@+id/alarmTimeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
         android:text="Set alarm time:"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_gravity="center_horizontal"/>
+        app:layout_constraintBottom_toTopOf="@+id/timePicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TimePicker
         android:id="@+id/timePicker"
+        android:layout_width="379dp"
+        android:layout_height="389dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="34dp"
+        app:layout_constraintBottom_toTopOf="@+id/setAlarmButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/setAlarmButton" />
+
+    <Button
+        android:id="@+id/MyAlarm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        />
+        android:layout_marginBottom="100dp"
+        android:text="My Alarm"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/setAlarmButton"
-        android:layout_width="wrap_content"
+        android:layout_width="111dp"
         android:layout_height="wrap_content"
         android:text="Set Alarm"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="16dp"/>
+        app:layout_constraintBottom_toTopOf="@+id/MyAlarm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timePicker"
+        app:layout_constraintVertical_bias="0.476" />
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
